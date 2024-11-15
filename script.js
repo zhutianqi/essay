@@ -31,6 +31,7 @@ document.getElementById("loginButton").addEventListener("click", () => {
 document.getElementById("askButton").addEventListener("click", async () => {
     const apiKey = sessionStorage.getItem("apiKey");
     const userInput = document.getElementById("userInput").value;
+    const model_ = document.getElementById('modelSelect').value;
 
     if (!apiKey) {
         alert("API Key 未解密，请重新登录！");
@@ -51,7 +52,9 @@ document.getElementById("askButton").addEventListener("click", async () => {
                 Authorization: `Bearer ${apiKey}`,
             },
             body: JSON.stringify({
-                model: "gpt-4",
+                // model: "gpt-4",
+                // model: "o1-preview",
+                model: model_,
                 messages: [
                     {
                         role: "user",

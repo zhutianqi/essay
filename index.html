@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>解密并调用 OpenAI API</title>
+    <title>帮你写文书</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,13 +18,19 @@
     </style>
 </head>
 <body>
-    <h1>解密并调用 OpenAI API</h1>
+    <h1>帮你写文书</h1>
     <div id="loginSection">
         <p>请输入密码以解密 API Key：</p>
         <input type="password" id="password" placeholder="输入密码">
         <button id="loginButton">登录</button>
     </div>
     <div id="chatSection" style="display:none;">
+        <label for="modelSelect">选择模型：</label>
+        <select id="modelSelect">
+            <option value="o1-preview">o1-preview(慢但更聪明)</option>
+            <option value="gpt-4">gpt-4</option>
+        </select>
+        <br><br>
         <textarea id="userInput" placeholder="输入你的问题"></textarea>
         <button id="askButton">提问</button>
         <div id="result">回答会显示在这里。</div>
