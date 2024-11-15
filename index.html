@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>解密并调用 OpenAI API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website!</h1>
-    </header>
-    <main>
-        <p>This is a simple website template for GitHub Pages.</p>
-        <button id="actionButton">Click Me!</button>
-    </main>
-    <footer>
-        <p>&copy; 2024 My GitHub Page</p>
-    </footer>
+    <h1>解密并调用 OpenAI API</h1>
+    <div id="loginSection">
+        <p>请输入密码以解密 API Key：</p>
+        <input type="password" id="password" placeholder="输入密码">
+        <button id="loginButton">登录</button>
+    </div>
+    <div id="chatSection" style="display:none;">
+        <textarea id="userInput" placeholder="输入你的问题"></textarea>
+        <button id="askButton">提问</button>
+        <div id="result">回答会显示在这里。</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
